@@ -1,0 +1,71 @@
+<div align="center">
+  <section>
+    <mat-card>
+      <div fxLayout="column">
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="Your Email"
+              ngModel
+              name="email"
+              email
+              required
+              #emailInput="ngModel"
+            />
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            <mat-error *ngIf="emailInput.hasError('required')">
+              Field must enter</mat-error
+            >
+            <mat-error *ngIf="!emailInput.hasError('required')">
+              Email is Incorrect</mat-error
+            >
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>password</mat-label>
+            <input
+              matInput
+              type="password"
+              placeholder="Your password"
+              ngModel
+              name="password"
+              required
+              minlength="6"
+              #pwInput="ngModel"
+            />
+            <mat-hint> {{ pwInput.value?.length }} / 6</mat-hint>
+            <mat-error> has to be at least 6 char long. </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              [matDatepicker]="picker"
+              [max]="maxDate"
+              ngModel
+              name="birthday"
+              placeholder="Your birthday"
+              required
+            />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+          <div fxLayoutAlign="end start">
+            <button mat-button class="btn" (click)="onSubmit()">sign-up</button>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-evenly center">
+          <button mat-button class="btn" disabled>sign-in</button>
+          <p>Forget password?</p>
+        </div>
+      </div>
+    </mat-card>
+  </section>
+</div>

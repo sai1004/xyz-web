@@ -8,6 +8,9 @@ import { AuthService } from "../auth.service";
   styleUrls: ["./sign-in.component.css"]
 })
 export class SignInComponent implements OnInit {
+
+  isDisable = true;
+
   loginForm: FormGroup;
 
   constructor(private authService: AuthService) {}
@@ -17,9 +20,7 @@ export class SignInComponent implements OnInit {
       email: new FormControl("", {
         validators: [Validators.required, Validators.email]
       }),
-      password: new FormControl("", {
-        validators: [Validators.required]
-      })
+      password: new FormControl("", { validators: [Validators.required] })
     });
   }
 

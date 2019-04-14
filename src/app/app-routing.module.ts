@@ -5,10 +5,19 @@ import { AuthRoutingModule } from './modules/auth/auth-routing.module';
 
 const routes: Routes = [
  
-  { path: "", pathMatch: "full", redirectTo: "auth/signin" },
+  // { path: "", pathMatch: "full", redirectTo: "auth/signin" },
+  // {
+  //   path: "signin",
+  //   loadChildren: "./modules/auth/auth.module#AuthModule",
+  // },
+  // {
+  //   path: "welcome",
+  //   loadChildren: "./modules/welcome/welcome.module#WelcomeModule"
+  // },
+
   {
-    path: "signin",
-    loadChildren: "./modules/auth/auth.module#AuthModule",
+    path: "auth",
+    loadChildren: "./modules/auth/auth.module#AuthModule"
   },
 
 

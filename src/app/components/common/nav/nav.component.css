@@ -1,7 +1,8 @@
 .sidenav-container {
-    height: 100%;
-  }
-  
-  .sidenav{
-    width: 100px;
-  }
+  height: 100%;
+}
+
+.sidenav {
+  width: 100px;
+  background-color: rgb(130, 255, 203);
+}

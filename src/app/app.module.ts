@@ -1,47 +1,28 @@
-// components
-import { AppComponent } from "./app.component";
-
-// modules
-
 import { BrowserModule } from "@angular/platform-browser";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { NgModule } from "@angular/core";
-import { MatSnackBar } from "@angular/material";
-import { AppRoutingModule } from "./app-routing.module";
-import { AuthModule } from "../app/modules/auth/auth.module";
-import { SharedModule } from "../app/shared/shared.module";
-import { DashboardModule } from "./modules/dashboard/dashboard.module";
-import { ComponentsModule } from "./components/components.module";
 
-// services
-import { HttpService } from "./shared/service/http.service";
-import { AuthService } from "./shared/service/auth.service";
-import { ErrorsService } from "./shared/service/error.service";
-import { ValidationService } from "./shared/service/validation.service";
-import { AppService } from "./shared/service/app.service";
+import { NgModule } from "@angular/core";
+import { AppComponent } from "./app.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NavComponent } from "./components/common/nav/nav.component";
+import { LayoutModule } from "@angular/cdk/layout";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { AppRoutingModule } from "./app-routing.module";
+import { SharedModule } from "./shared/shared.module";
 import { ApexService } from "./shared/service/apex.service";
+import { AuthService } from "./shared/service/auth.service";
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NavComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    LayoutModule,
+    FlexLayoutModule,
     AppRoutingModule,
-    SharedModule,
-    AuthModule,
-    DashboardModule,
-    ComponentsModule
+    SharedModule.forRoot()
   ],
-  providers: [
-    HttpService,
-    AuthService,
-    ErrorsService,
-    ValidationService,
-    AppService,
-    ApexService,
-    MatSnackBar
-  ],
-
+  entryComponents: [],
+  providers: [ApexService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

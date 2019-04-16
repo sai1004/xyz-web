@@ -1,14 +1,15 @@
+//<------------------modules-------------------->
 import { NgModule } from "@angular/core";
-
 import { CommonModule } from "@angular/common";
 import { SharedModule } from "../../shared/shared.module";
 import { Routes, RouterModule } from "@angular/router";
 import { ComponentsModule } from "../../components/components.module";
 
-import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
+//<------------------components-------------------->
+import { DashboardPageComponent } from "./dashboard-page/dashboard-page.component";
 
 const routes: Routes = [
-  { path: "dashboard", component: DashboardPageComponent },
+  { path: "dashboard", component: DashboardPageComponent }
 ];
 
 @NgModule({
@@ -16,8 +17,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     SharedModule,
-    ComponentsModule, 
+    ComponentsModule,
     RouterModule.forChild(routes)
   ]
 })
-export class DashboardModule { }
+export class DashboardModule {}

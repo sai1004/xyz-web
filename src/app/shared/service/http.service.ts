@@ -1,6 +1,6 @@
 import { Injectable, Inject } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Props } from "../../constants/props";
+import { Props } from "../../modules/constants/props";
 import { Util } from "../utils/util";
 import { ApexService } from "./apex.service";
 

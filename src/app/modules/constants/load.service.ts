@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
-import { AppService } from "../shared/service/app.service";
-import { HttpService } from "../shared/service/http.service";
+import { AppService } from "../../shared/service/app.service";
+import { HttpService } from "../../shared/service/http.service";
 
 @Injectable()
 export class LoadService {

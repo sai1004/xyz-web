@@ -42,3 +42,4 @@ export class Props {
   public static MESSAGE: string = "YOUR PROFILE IS NOT VERIFIED";
   public static PROFILE_STATUS_VERIFIED: string = "VERIFIED";
 
+}

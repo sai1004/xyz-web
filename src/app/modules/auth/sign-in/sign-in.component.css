@@ -1,8 +1,20 @@
+section{
+  background-image: url( '../../../../assets/login.jpg');
+  background-repeat: repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  
+
+}
 mat-card {
   height: 380px;
-  width: 400px;
-  
+  width: 300px;
+  /* background: transparent; */
   box-shadow: 1px 1px 0px 1px gray;
+  /* opacity: 0.5; */
+  /* color: white; */
   
 }
  

@@ -4,14 +4,16 @@ import { AppComponent } from "./app.component";
 // modules
 
 import { BrowserModule } from "@angular/platform-browser";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
 import { MatSnackBar } from "@angular/material";
 import { AppRoutingModule } from "./app-routing.module";
 import { AuthModule } from "../app/modules/auth/auth.module";
 import { SharedModule } from "../app/shared/shared.module";
+import { DashboardModule } from "./modules/dashboard/dashboard.module";
+import { ComponentsModule } from "./components/components.module";
 
-// services 
+// services
 import { HttpService } from "./shared/service/http.service";
 import { AuthService } from "./shared/service/auth.service";
 import { ErrorsService } from "./shared/service/error.service";
@@ -21,7 +23,15 @@ import { ApexService } from "./shared/service/apex.service";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule,BrowserAnimationsModule, AppRoutingModule, SharedModule, AuthModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    SharedModule,
+    AuthModule,
+    DashboardModule,
+    ComponentsModule
+  ],
   providers: [
     HttpService,
     AuthService,

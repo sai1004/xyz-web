@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { AppService } from "../../shared/service/app.service";
 import { HttpService } from "../../shared/service/http.service";
-import { Props } from "../../modules/constants/props";
+import { Props } from "../../constants/props";
 // import { Storage } from "../../shared/utils/storage";
 import * as decode from "jwt-decode";
 

@@ -1,5 +1,7 @@
-<section class="signup-form">
-    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
+<section fxLayoutAlign="center center">
+  <mat-card>
+
+    <form fxLayout="column" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
       <mat-form-field>
         <input type="email" matInput placeholder="Your email" ngModel name="email" email required #emailInput="ngModel">
         <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty.</mat-error>
@@ -18,4 +20,6 @@
       <mat-checkbox ngModel name="agree" required color="primary">Agree to Terms and Conditions.</mat-checkbox>
       <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Submit</button>
     </form>
+  </mat-card>
+
   </section>
